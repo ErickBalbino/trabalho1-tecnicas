@@ -53,9 +53,6 @@ public class SistemaJavaLar {
 			System.out.print("Informe o número de desenvolvedores a serem inseridos: ");
 			int desenvolvedoresNovos = scanner.nextInt();
 
-			// remover planetas com velocidade 0
-			planetas.removeIf(planeta -> planeta.getVelocidadeTranslacao() == 0);
-
 			for (Planeta planeta : planetas) {
 				planeta.mover(tempoInstante);
 			}
@@ -94,7 +91,11 @@ public class SistemaJavaLar {
 							+ "explodiu: velocidade de translação é zero! Saiu do sistema");
 
 				}
+
 			}
+
+			// remover planetas com velocidade 0
+			planetas.removeIf(planeta -> planeta.getVelocidadeTranslacao() == 0);
 
 			// verificar colisões
 			for (Planeta planeta : planetas) {

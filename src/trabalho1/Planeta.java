@@ -37,8 +37,6 @@ abstract class Planeta {
 		}
 	}
 
-	// Getters e Setters
-
 	public String getNome() {
 		return nome;
 	}
